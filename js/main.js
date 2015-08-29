@@ -1,8 +1,10 @@
+var myId = document.getElementById("myContent");
+
 function myButFunc()
 {
 	var name = prompt("Enter your name.");
 	localStorage.setItem('name',name);
-	document.getElementById("myDiv").innerHTML = "Hello, " + name;
+	myId.innerHTML = "Hello, " + name;
 }
 
 if(!localStorage.getItem('name'))
@@ -12,5 +14,5 @@ if(!localStorage.getItem('name'))
 else
 {
 	var name = localStorage.getItem('name',name);
-	document.getElementById("myDiv").innerHTML = "Hello, " + name;	
+	myId.innerHTML = "Hello, " + name;	
 }
